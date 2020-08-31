@@ -1,0 +1,33 @@
+
+
+.container{
+    animation-duration:1.3s;
+    animation-name: leftToRight;
+    animation-iteration-count: 1;
+    position: relative;
+
+    
+
+
+
+}
+
+@keyframes leftToRight{
+    from {left: -100%}
+    to {left: 0%}
+
+}
+
+.mobile_nav{
+    animation-duration: 1s;
+    animation-name: expand;
+    animation-fill-mode: forwards;
+
+
+}
+
+@keyframes expand{
+    from {width: 25%}
+    to {width: 100%}
+
+}
