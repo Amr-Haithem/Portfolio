@@ -17,7 +17,7 @@ html {
     scroll-behavior: smooth;
   }
 
-
+/*navbar*/
 nav{
     height: fit-content;
     background-color: #256cad;
@@ -55,20 +55,7 @@ nav img{
 
 }
 
-@media(max-width:700px){
-    nav img{
-        left: 25%
-    }
-        
-    .normal_navbar_container{
-        display: none;
 
-    }
-    
-
-
-
-}
 .normal_navbar{
     text-decoration: none;
     color: white;
@@ -109,13 +96,13 @@ nav #burger:hover{
 }
 
 .mobile_nav{
-    width: 0%;
     height:200px;
-    margin-top: 46px;
     background-color:rgb(41, 118, 233);
     display: flex;
     flex-wrap: wrap;
-    position: fixed;
+    position: absolute;
+    left: 0;
+    top: 47px;
     z-index: 1;
 
 
@@ -136,39 +123,35 @@ nav #burger:hover{
 .mobile_nav a:hover{
     background-color:rgba(183, 197, 218, 0.473) ;
 }
+/*end navbar*/
+
+
 .section_1{
-    padding-top: 30px;
-    padding-bottom: 18px;
+    min-height: 577px;
+    margin-top: 47px;
     height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content:center;
 
 }
 
 
 
 .container{
-    margin: 180px;
-    margin-bottom: 30px;
-    height: fit-content;
-    margin-top: 43px;
+    min-height: 500px;
+    width: 80%;
+    height: 90%;
     display: flex;
     flex-wrap:wrap;
-    padding-top: 50px;
     align-content: center;
     background-color: #68beff;
 
 
    
 }
-@media(max-width:415px){
-    .section_1{
-        margin-right: 100;
-        margin-left: 100px;
 
-    }
-
-
-
-}
 
 .img_container{
     width: 50%;
@@ -178,6 +161,11 @@ nav #burger:hover{
     align-content: center;
 
 }
+.img_container img{
+    width: 65%;
+    height: 100%;
+
+}
 .text_container{
     
     font-family: 'Nova Round', cursive;
@@ -185,62 +173,8 @@ nav #burger:hover{
     justify-content: center;
     text-align: center;
     height: fit-content;
-    padding-right: 100px;
-    
-        
-    
 }
 
-@media(max-height:1123px){
-    .text_container{
-        height: fit-content;
-    }
-
-}
-
-@media(max-width:930px){
-
-  
-    section{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .img_container{
-        width: 100%;
-        height: fit-content;
-    }
-    .text_container{
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-        color:  rgb(65, 65, 121);
-       
-        
-    }
-
-}
-
-@media(max-width:540px){
-  /*  body{
-        text-align: center;
-    }*/
-  
-    .container{
-        display: inline-block;
-       /* width: 164px;*/
-       position: relative;
-       right: 50px;
-    }
-   
-}
-img{
-    height: 100%;
-    width: 80%;
-    display: inline-block;
-    
-
-}
 
 
 .text_container h2{
@@ -249,10 +183,8 @@ img{
     text-align: center;
     display: inline-block;
     color:  rgb(255, 255, 255);
-
-
-
 }
+
 .text_container p{
     width: 90%;
     margin-top: 50px;
@@ -265,34 +197,9 @@ img{
 }
 
 
-
-.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-  }
-.arrow{
-    border: solid black;
-    border-width: 0 4px 4px 0;
-    display: inline-block;
-    padding: 7px;
-    
-    
-    
-}
-.arrowContainer{
-    justify-self: center;
-    margin: 0;
-    position: relative;
-    left: 470px;
-    top: 30px;
-
-}
-
-
-
 .button_container{
     display: inline-block;
-    margin: 70px;
+    margin: 20px 0px ;
 }
 
 button{
@@ -303,28 +210,50 @@ button{
     background-color: rgb(236, 251, 252);
     color: black;
     
-
-    /*position: relative;
-    top: 50px;
-    left:150px*/
 }
 
 button:hover{
     background-image:linear-gradient(to left,rgb(10, 205, 253),rgb(56, 56, 172)) ;
     color: white;
     cursor: pointer;
-    /*position: relative;
-    top: 50px;
-    left:150px*/
 }
-@media (max-width:676px){
+/*img adjusting*/
+@media(max-width:964px){
+    .img_container img{
+        width: 70%;
+        height: 90%;
+    }
+
+}
+@media(max-width:870px){
+    .img_container img{
+        width: 80%;
+        height: 90%;
+    }
+
+}
+
+/*end img adjusting*/
+
+
+@media(max-width:700px){
+    .img_container{
+        width: 100%;
+        margin-top: 50px;
+
+    }
     .text_container{
-        height: fit-content;
+        width: 100%;
     }
-    .button_container{
-        margin: 0;
-        margin-top: 30px;
+    .normal_navbar_container{
+        display: none;
     }
+    .img_container img{
+        width: 60%;
+        height: 70%;
+    }
+
+
 }
 
 /*end section 1*/
@@ -427,6 +356,7 @@ button:hover{
         width: 100%;
         margin-bottom: 70px;
     }
+    
 
 
 }
@@ -606,7 +536,7 @@ button:hover{
     .container_of_icons{
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(3,150px);
+        grid-template-columns: repeat(3,33.3%);
         justify-content: center;
         justify-items: center;
         align-content: center;
@@ -637,11 +567,6 @@ button:hover{
         align-content: center;
         align-items: center;
     
-    }
-    .section_1{
-        margin-left: 20px;
-
-
     }
     #certificate{
         width: 300px;

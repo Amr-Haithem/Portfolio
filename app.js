@@ -5,6 +5,7 @@ const section_1= document.querySelector('.section_1')
 const normal_navbar_container=document.querySelector('.normal_navbar_container')
 
 
+
 let i=0;
 
 function printingInnerWidth(currentTime){
@@ -39,8 +40,6 @@ hamburger_container.addEventListener('click',()=>{
     if(toggle!=true){
         let mobile_nav=document.createElement('DIV')
     section_1.insertAdjacentElement('afterbegin', mobile_nav)
-
-    //document.body.appendChild(mobile_nav);
     mobile_nav.classList.add('mobile_nav')
     mobile_nav.innerHTML=`
     <a>Home</a>
